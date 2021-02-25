@@ -4,6 +4,7 @@ import { List, ListItem, ListItemText } from '@material-ui/core';
 import { Activity } from './models/activity';
 import {} from '@material-ui/core';
 import NavBar from './NavBar';
+import ActivityDashboard from '../../features/activities/dashboard/ActivityDashboard';
 
 function App() {
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -21,6 +22,7 @@ function App() {
   return (
     <div>
       <NavBar />
+      <ActivityDashboard activities={activities} />
     </div>
   );
 }
